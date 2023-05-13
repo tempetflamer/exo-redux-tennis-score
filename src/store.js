@@ -11,11 +11,11 @@ const initialState = {
   
   // actions creators
   
-  const playPause = () => ({ type: "playPause" });
+  export const playPause = () => ({ type: "playPause" });
   
-  const restartGame = () => ({ type: "restart" });
+  export const restartGame = () => ({ type: "restart" });
   
-  const pointScored = (player) => ({
+  export const pointScored = (player) => ({
     type: "pointScored",
     payload: { player: player },
   });
@@ -72,4 +72,4 @@ const initialState = {
     return state;
   }
   
-  const store = createStore(reducer);
+  export const store = createStore(reducer);
