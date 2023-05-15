@@ -6,7 +6,7 @@ export function PlayPauseButton() {
   const dispatch = useDispatch();
 
   return (
-    <button
+    <button className="button"
       onClick={() => {
         // au clique sur le bouton on exécute la fonction dispatch avec une action (ici : PlayPause).
         dispatch(playPause());
