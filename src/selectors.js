@@ -37,3 +37,22 @@ export const selectDisplayText = (state) => {
         return text;
     }
 }
+
+export const selectPointBeforeWin = (playerId) => {
+    const otherPlayerId = playerId === "player1" ? "player2" : "player1";
+    return (state) => {
+
+        if(state.winner) {
+            return null;
+        }
+        if(state.advantage === playerId) {
+            return 1;
+        }
+        if(state.advantage === otherPlayerId) {
+            return 3;
+        }
+
+        //si aucun joueur est en avantage on affiche pas le nombre de coup avant victoire
+        return null
+    }
+}
