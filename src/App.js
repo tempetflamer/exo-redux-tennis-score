@@ -3,10 +3,15 @@ import { Display } from "./Display";
 import { ResetButton } from "./ResetButton";
 import { PointScoredButton } from "./PointScoredButton";
 import { PlayerScore } from "./PlayerScore";
+import { PlayerPoints } from "./PlayerPoints";
 
 function App() {
   return (
     <div>
+      <div className="buttons-row">
+        <PlayerPoints playerId="player1" playerName="Player 1" />
+        <PlayerPoints playerId="player2" playerName="Player 2" />
+      </div>
       <Display />
       <PlayerScore playerId="player1" playerName="Player 1" />
       <PlayerScore playerId="player2" playerName="Player 2" />
